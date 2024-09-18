@@ -1,0 +1,40 @@
+# original Django
+asgiref==3.8.1
+Django==5.1.1
+sqlparse==0.5.1
+
+# pip install django-ninja
+django-ninja==1.3.0
+annotated-types==0.7.0
+pydantic==2.9.1
+pydantic_core==2.23.3
+typing_extensions==4.12.2
+
+# pip install django-extensions
+django-extensions==3.2.3
+
+# pip install django-mptt
+django-js-asset==2.2.0
+django-mptt==0.16.0
+
+# pip install django-mptt-admin
+django-mptt-admin==2.7.0
+
+# для обработки картинков
+# newer versions are not compatoble with some macOS
+pillow==10.1.0
+
+# pip install django-ninja-jwt
+django-ninja-extra==0.21.4
+django-ninja-jwt==5.3.3
+cffi==1.17.1
+contextlib2==21.6.0
+cryptography==43.0.1
+injector==0.22.0
+PyJWT==2.9.0
+pycparser==2.22
+
+# pip install django-cors-headers
+# django-cors-headers==4.4.0
+
+

@@ -1,0 +1,58 @@
+### GET Categories (as Tree) - paginated, limit - 5, offset - 1
+http://localhost:8000/api/categories?limit=5&offset=1
+
+### GET Categories Flat, all
+http://localhost:8000/api/categories/
+
+### GET ALL PRODUCTS with their categories (Cat -> Subcat -> Subsubcat)
+localhost:8000/api/products?limit=2&offset=0
+
+
+### LOGIN And get Tokens
+
+# curl
+#  -X POST
+#  -H "Content-Type: application/json"
+#  -d '{"username": "admin", "password": "admin"}'
+#  http://localhost:8000/api/token/pair
+
+POST http://localhost:8000/api/token/pair
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+
+
+### CART - View
+GET http://localhost:8000/api/cart/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### CART - Add x products
+POST http://localhost:8000/api/cart/add?product_id=2&quantity=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### CART - CLEAR
+POST http://localhost:8000/api/cart/clear/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### CART - REMOVE SINGLE PRODUCT
+POST http://localhost:8000/api/cart/remove?product_id=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### CART - UPDATE QUANTITY OF PRODUCT
+POST http://localhost:8000/api/cart/update?product_id=1&quantity=4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### Test if Protected function works
+GET http://localhost:8000/api/protected_data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzUzNDQ5LCJpYXQiOjE3MjY2NjcwNDksImp0aSI6IjVhMjBhODZjMGJlMjQxZGRiY2ZkMTUyOTUwNjUwMzBhIiwidXNlcl9pZCI6MX0.JELi75pbYKqNI93_HEbf1gUIjV5p6zs8_K6T-4pGoBk
+
+### Test if Protected function works - SIMPIER TEST
+GET http://localhost:8000/api/protected_data_test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzQ2MzEwLCJpYXQiOjE3MjY2NTk5MTAsImp0aSI6IjA4NzJkM2I2MmZkYTQwMmZhNWQ0NzNmMjdmY2I1OGE3IiwidXNlcl9pZCI6MX0.FtH8jUwo0szEnKLpPEMCPM8yCXasdAraKK7iNu_0Rz4
+
+### TEST WITHOUT REDENTIALS
+GET http://localhost:8000/api/protected_data
