@@ -218,7 +218,7 @@ def protected_data(request):
 
 @shop_api.get("/protected_data_test", auth=JWTAuth(),
               summary="Проверка токена", tags=["Test"])
-def protected_data(request):
+def protected_data_test(request):
     return {"message": "Token is recognized!"}
 
 

@@ -54,5 +54,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 GET http://localhost:8000/api/protected_data_test
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NzQ2MzEwLCJpYXQiOjE3MjY2NTk5MTAsImp0aSI6IjA4NzJkM2I2MmZkYTQwMmZhNWQ0NzNmMjdmY2I1OGE3IiwidXNlcl9pZCI6MX0.FtH8jUwo0szEnKLpPEMCPM8yCXasdAraKK7iNu_0Rz4
 
-### TEST WITHOUT REDENTIALS
+### TEST WITHOUT CREDENTIALS
 GET http://localhost:8000/api/protected_data
